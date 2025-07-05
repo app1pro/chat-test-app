@@ -2,6 +2,29 @@
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
+## Error: A weird white space below the textinput
+
+When clicking on the textinput and exiting, the keyboard shrinks but leaves a weird white space below the textinput. This doesn't happen on iOS but does happen on Android (on both simulator and real device).
+
+**iOS:** Good.
+**Android:** Error!?
+**Framework:** React Native + Expo (53)
+
+Git for demo: [https://github.com/app1pro/chat-test-app](https://github.com/app1pro/chat-test-app)
+
+Video Screenshot:
+
+<img width="350" height="208" alt="Image" src="https://github.com/user-attachments/assets/31868a24-7e3d-44b5-9617-99a57bff327d" />
+
+https://github.com/user-attachments/assets/715a744a-19a3-4093-be54-eb12ef756ee5
+
+When not click:
+
+<img width="349" height="760" alt="Image" src="https://github.com/user-attachments/assets/476ce427-564d-4561-ad41-fe38c104ce8f" />
+
+When click then click out (weird white space):
+<img width="351" height="760" alt="Image" src="https://github.com/user-attachments/assets/3f2c6acb-07c5-4acf-82d7-1472eb2689e7" />
+
 ## Get started
 
 1. Install dependencies
