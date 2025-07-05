@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, FlatList, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, FlatList, ImageBackground, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function ChatScreen() {
@@ -18,11 +18,14 @@ const insets = useSafeAreaInsets();
     }
   };
 
+    const bgImage = require('@/assets/images/bg001.png');
+
   return (
     <View style={[styles.container, {paddingBottom: insets.bottom}]}>
         <View style={{ flex: 1, backgroundColor: '#eee' }}>
+          <ImageBackground source={bgImage} style={{ flex: 1 }} resizeMode="cover">
             <KeyboardAvoidingView
-                behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+                behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
                 style={{ flex: 1 }}
                 keyboardVerticalOffset={Platform.OS === 'ios' ? 90 : 90}
             >
@@ -46,6 +49,7 @@ const insets = useSafeAreaInsets();
                         <Button title="Send" onPress={sendMessage} />
                     </View>
             </KeyboardAvoidingView>
+          </ImageBackground>
         </View>
     </View>
   );
